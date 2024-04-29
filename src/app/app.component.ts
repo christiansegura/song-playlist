@@ -10,6 +10,10 @@ import {Store} from './store';
     {{playlist?.id}} - {{playlist?.band}}
   </div>
   <pre>{{playlist$ | async | json}}</pre>
+
+  <songs-playlist></songs-playlist>
+  <songs-listened></songs-listened>
+  <songs-favorites></songs-favorites>
   `,
 })
 export class AppComponent {
