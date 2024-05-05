@@ -2,9 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
 
+## Local JSON Server
+
+Run `npx json-server db.json` for a local data server in order to see the play lists populated.
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Browser will open automatically. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

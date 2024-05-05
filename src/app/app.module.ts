@@ -4,6 +4,7 @@ import { SongsModule } from './songs/songs.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {Store} from './store';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent
@@ -11,7 +12,8 @@ import {Store} from './store';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SongsModule
+    SongsModule,
+    FontAwesomeModule
   ],
   providers: [Store],
   bootstrap: [AppComponent]

@@ -1,0 +1,60 @@
+{
+  "playlist": [
+    {
+      "id": "1",
+      "artist": "Oasis",
+      "track": "Half The World Away",
+      "listened": true,
+      "favorite": true
+    },
+    {
+      "id": "2",
+      "artist": "Pink Floyd",
+      "track": "Wish You Were Here",
+      "listened": true,
+      "favorite": true
+    },
+    {
+      "id": "3",
+      "artist": "Blink-182",
+      "track": "All The Small Things",
+      "listened": true,
+      "favorite": false
+    },
+    {
+      "id": "4",
+      "artist": "Periphery",
+      "track": "The Bad Thing",
+      "listened": false,
+      "favorite": false
+    },
+    {
+      "id": "5",
+      "artist": "Attila",
+      "track": "Callout",
+      "listened": false,
+      "favorite": false
+    },
+    {
+      "id": "6",
+      "artist": "Eighteen Visions",
+      "track": "Sink",
+      "listened": true,
+      "favorite": false
+    },
+    {
+      "id": "7",
+      "artist": "Volumes",
+      "track": "Get Enough",
+      "listened": true,
+      "favorite": false
+    },
+    {
+      "id": "8",
+      "artist": "Reflections",
+      "track": "My Communication",
+      "listened": true,
+      "favorite": false
+    }
+  ]
+}

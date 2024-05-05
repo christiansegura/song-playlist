@@ -1,0 +1,10 @@
+.songs-list__favourite, .songs-list__listened{
+  cursor: pointer;
+}
+
+.songs-list__favourite.active{
+  color: red;
+}
+.songs-list__listened.active{
+  color: green;
+}
