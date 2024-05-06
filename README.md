@@ -1,5 +1,7 @@
 # StateManagement
 
+This is a simple playlist app where you can favorite tracks and mark tracks as listened leveraging state with a store.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
 
 ## Local JSON Server
