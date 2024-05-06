@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Store} from '../../store';
 import {Song} from '../../songs/services/songs.service';
 import {faHeart, faHeadphones} from '@fortawesome/free-solid-svg-icons';
@@ -18,10 +18,12 @@ import {faHeart, faHeadphones} from '@fortawesome/free-solid-svg-icons';
             <span>{{ item?.track }}</span>
           </div>
           <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-            <div class="songs-list__favourite" [class.active]="item.favorite" (click)="toggleItem(i, 'favorite')"><i class="fa-solid fa-heart"></i>
+            <div class="songs-list__favourite" [class.active]="item.favorite" (click)="toggleItem(i, 'favorite')"><i
+              class="fa-solid fa-heart"></i>
               <fa-icon [icon]="faHeart"></fa-icon>
             </div>
-            <div class="songs-list__listened" [class.active]="item.listened" (click)="toggleItem(i, 'listened')"><i class="fa-solid fa-headphones-simple">
+            <div class="songs-list__listened" [class.active]="item.listened" (click)="toggleItem(i, 'listened')"><i
+              class="fa-solid fa-headphones-simple">
               <fa-icon [icon]="faHeadphones"></fa-icon>
             </i></div>
           </div>
@@ -31,7 +33,7 @@ import {faHeart, faHeadphones} from '@fortawesome/free-solid-svg-icons';
   `
 })
 
-export class SongsListComponent implements OnInit {
+export class SongsListComponent {
   faHeart = faHeart;
   faHeadphones = faHeadphones;
   @Input() list: Song[] = [];
@@ -40,11 +42,8 @@ export class SongsListComponent implements OnInit {
   constructor(private store: Store) {
   }
 
-  ngOnInit() {
 
-  }
-
-  toggleItem(index:number, prop: string){
+  toggleItem(index: number, prop: string) {
     const track = this.list[index];
     this.toggle.emit({
       track: {...track, [prop]: !track[prop]}

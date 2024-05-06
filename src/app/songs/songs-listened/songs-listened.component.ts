@@ -15,9 +15,10 @@ import {map, Observable} from 'rxjs';
   `
 })
 
-export class SongsListenedComponent implements OnInit{
+export class SongsListenedComponent implements OnInit {
 
   listenedSongs$: Observable<any> = new Observable<any>();
+
   constructor(private songsService: SongsService, private store: Store) {
   }
 
@@ -25,7 +26,7 @@ export class SongsListenedComponent implements OnInit{
     this.listenedSongs$ = this.store.select('playlist').pipe(map(song => song.filter((song: any) => song?.listened)));
   }
 
-  onToggle(event: any){
+  onToggle(event: any) {
     this.songsService.toggle(event);
   }
 

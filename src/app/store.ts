@@ -1,4 +1,3 @@
-import {Injectable} from '@angular/core';
 import {BehaviorSubject, distinctUntilChanged, map, Observable} from 'rxjs';
 import {State} from './state';
 

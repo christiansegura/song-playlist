@@ -5,7 +5,7 @@ import {filter, map, Observable} from 'rxjs';
 
 @Component({
   selector: 'songs-favorites',
-  template:`
+  template: `
     <songs-list
       [list]="favorites$ | async"
       (toggle)="onToggle($event)"
@@ -14,14 +14,17 @@ import {filter, map, Observable} from 'rxjs';
     </songs-list>
   `
 })
- export class SongsFavoritesComponent implements OnInit{
+export class SongsFavoritesComponent implements OnInit {
   favorites$: Observable<any> = new Observable<any>();
+
   constructor(private store: Store, private songsService: SongsService) {
   }
+
   ngOnInit() {
-    this.favorites$ = this.store.select('playlist').pipe(map(playlist =>  playlist.filter((track: any) => track?.favorite)));
+    this.favorites$ = this.store.select('playlist').pipe(map(playlist => playlist.filter((track: any) => track?.favorite)));
   }
-  onToggle(event: any){
+
+  onToggle(event: any) {
     this.songsService.toggle(event);
   }
 }
